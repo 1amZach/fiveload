@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Loading</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="config.js"></script>
+</head>
+<body>
+    <div id="bg" class="bg">
+        <div class="orb a"></div>
+        <div class="orb b"></div>
+        <div class="orb c"></div>
+    </div>
+    <div class="shade"></div>
+
+    <main>
+        <header class="brand">
+            <img id="logo" alt="">
+            <div>
+                <h1 id="name"></h1>
+                <p id="tagline"></p>
+            </div>
+        </header>
+
+        <aside class="side">
+            <section class="panel info" id="info" hidden>
+                <div class="stat"><strong id="players">0</strong><span>online</span></div>
+                <div class="stat" id="staffStat" hidden><strong id="staff">0</strong><span>staff on</span></div>
+                <p class="queue" id="queue" hidden></p>
+            </section>
+
+            <section class="panel news" id="news" hidden>
+                <h2>Latest news</h2>
+                <p id="newsText"></p>
+                <span class="meta" id="newsMeta"></span>
+            </section>
+
+            <div id="announcements"></div>
+
+            <nav class="links" id="links"></nav>
+        </aside>
+
+        <footer>
+            <p class="tip" id="tip"></p>
+            <div class="bottom">
+                <div class="progress">
+                    <div class="row">
+                        <span id="stage">Starting up</span>
+                        <span id="percent">0%</span>
+                    </div>
+                    <div class="bar"><div id="fill"></div></div>
+                    <span class="log" id="log"></span>
+                </div>
+                <div class="music" id="music" hidden>
+                    <button id="prev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg></button>
+                    <button id="play" aria-label="Play or pause"><svg viewBox="0 0 24 24"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg></button>
+                    <button id="next" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg></button>
+                    <div class="track">
+                        <strong id="track"></strong>
+                        <span id="artist"></span>
+                    </div>
+                    <input id="volume" type="range" min="0" max="1" step="0.01" aria-label="Volume">
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <audio id="audio"></audio>
+    <script src="app.js"></script>
+</body>
+</html>
